@@ -1,0 +1,7 @@
+name: pyglasma3d_cython
+dependencies:
+  - python=2.7
+  - cython
+  - matplotlib
+  - numpy
+  - scipy

@@ -1,0 +1,8 @@
+name: pyglasma3d_numba
+dependencies:
+  - cudatoolkit=10.2
+  - matplotlib=3.2.1
+  - numba=0.48.0
+  - numpy=1.18.5
+  - python=3.8.3
+  - scipy=1.4.1
