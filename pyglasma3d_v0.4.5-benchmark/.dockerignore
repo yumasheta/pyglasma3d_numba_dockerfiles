@@ -1,0 +1,3 @@
+update+build_locally.sh
+.dockerignore
+Dockerfile
