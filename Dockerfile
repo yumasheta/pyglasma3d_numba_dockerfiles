@@ -1,10 +1,10 @@
 FROM nvidia/cuda:10.2-base
 
-LABEL description="This image contains all dependencies of pyglasma3d_numba v0.4.5 and is used for benchmarks."
+LABEL description="This image contains all dependencies of pyglasma3d_numba v0.5 and is used for benchmarks."
 LABEL from="nvidia/cuda10.2-base"
 LABEL maintainer="Kayran Schmidt / yumasheta"
-LABEL runopts="docker run -it --gpus all --rm -v host_path/to/results:/results --tmpfs /wdir:exec this-image --bench --opts"
-LABEL version="v0.4.5-benchmark"
+LABEL runopts="docker run -it --gpus all --rm -v host_path/to/results:/results --tmpfs /wdir:exec this-image --opts"
+LABEL version="v0.5"
 
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends wget bzip2 curl \
@@ -27,5 +27,5 @@ COPY . /benchmark/
 VOLUME [ "/results", "/wdir" ]
 
 WORKDIR /benchmark
-ENTRYPOINT [ "/bin/bash", "run_benchmark.sh", "--output", "/results", "--wdir", "/wdir", "--env", "base" ]
-# CMD [ "--source", "pygl3d_XXXX", "--bench", "all", "--device", "cuda", "--test" ]
+ENTRYPOINT [ "/bin/bash", "run_benchmark.sh", "--output", "/results", "--wdir", "/wdir", "--env", "base", "--source", "pyglasma3d_cuda_devel-v0.5.tar.gz"]
+# CMD [ "--bench", "all", "--device", "cuda" ]
