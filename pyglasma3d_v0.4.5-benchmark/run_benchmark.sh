@@ -464,14 +464,14 @@ SAVE_DIR_INPUT=$(cd "${SAVE_DIR_INPUT}"; pwd)
 # TODO: outsource the sha to file(s)
 
 # sha512 checksums for tags for numba version
-# TODO: add checksum for v0.4.6
+# TODO: add checksums for new releases
 SHA512SUM_NUMBA=(
     e892e8793deab04999a0f307b1f7c4b83cb6c7abcc87da36bc262857449008cc45fcb2ae993b3e1c03127189e308ec16f8baaf91cb21d5cfe9e33c22d20d5851
-    "NOT IMPLEMENTED"
+    9388f41dd6a2200f682b73b88b1dc3417d8c156d612364f18653b88fbb8502b38914d22f60f194d8990d8b047d27bb10a33cdfcb5eb528b67fe4d90db159c02b
 )
 NUMBA_TAGS=(
     "v0.4.5-benchmark"
-    "v0.4.6"
+    "v0.5"
 )
 # sha512 checksums for cython version:
 # commit sha: dfc1fc5ee5294da14b28751d9cdf38f3bfa7ff6d 20.Apr.2018
